@@ -1,0 +1,604 @@
+{
+	Tools = ordered() {
+		ArrowColorTransformShadow = MacroOperator {
+			Inputs = ordered() {
+				Curvature = InstanceInput {
+					SourceOp = "ArrowShape",
+					Source = "Input1",
+					Default = 0.5,
+				},
+				TransformLabel = InstanceInput {
+					SourceOp = "ArrowShape",
+					Source = "TransformLabel",
+				},
+				TransformCenter = InstanceInput {
+					SourceOp = "ArrowTransform",
+					Source = "Center",
+				},
+				TransformSize = InstanceInput {
+					SourceOp = "ArrowTransform",
+					Source = "Size",
+					Default = 1,
+				},
+				TransformAngle = InstanceInput {
+					SourceOp = "ArrowTransform",
+					Source = "Angle",
+					Default = 0,
+				},
+				TransformFlipHoriz = InstanceInput {
+					SourceOp = "ArrowTransform",
+					Source = "FlipHoriz",
+					ControlGroup = 27,
+					Default = 0,
+				},
+				TransformFlipVert = InstanceInput {
+					SourceOp = "ArrowTransform",
+					Source = "FlipVert",
+					ControlGroup = 27,
+					Default = 0,
+				},
+				ColorType = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "Type",
+					Page = "Color",
+				},
+				ColorTopLeftRed = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 0.9450980392157,
+					Page = "Color",
+				},
+				ColorTopLeftGreen = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 2,
+					Default = 0.9450980392157,
+					Page = "Color",
+				},
+				ColorTopLeftBlue = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 2,
+					Default = 0.9450980392157,
+					Page = "Color",
+				},
+				ColorTopLeftAlpha = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 2,
+					Default = 0.6,
+					Page = "Color",
+				},
+				ColorTopRightSep = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopRightSep",
+					Page = "Color",
+				},
+				ColorTopRightRed = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopRightRed",
+					Name = "Top Right",
+					ControlGroup = 4,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorTopRightGreen = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopRightGreen",
+					ControlGroup = 4,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorTopRightBlue = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopRightBlue",
+					ControlGroup = 4,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorTopRightAlpha = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "TopRightAlpha",
+					ControlGroup = 4,
+					Default = 1,
+					Page = "Color",
+				},
+				ColorBottomLeftSep = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomLeftSep",
+					Page = "Color",
+				},
+				ColorBottomLeftRed = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomLeftRed",
+					Name = "Bottom Left",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomLeftGreen = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomLeftGreen",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomLeftBlue = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomLeftBlue",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomLeftAlpha = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 6,
+					Default = 1,
+					Page = "Color",
+				},
+				ColorBottomRightSep = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomRightSep",
+					Page = "Color",
+				},
+				ColorBottomRightRed = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomRightRed",
+					Name = "Bottom Right",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomRightGreen = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomRightGreen",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomRightBlue = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomRightBlue",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Color",
+				},
+				ColorBottomRightAlpha = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "BottomRightAlpha",
+					ControlGroup = 8,
+					Default = 1,
+					Page = "Color",
+				},
+				ColorGradientType = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "GradientType",
+					Page = "Color",
+				},
+				ColorStart = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "Start",
+					DefaultX = 0,
+					DefaultY = 0.5,
+					Page = "Color",
+				},
+				ColorEnd = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "End",
+					DefaultX = 1,
+					DefaultY = 0.5,
+					Page = "Color",
+				},
+				ColorGradient = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "Gradient",
+					Page = "Color",
+				},
+				ColorGradientInterpolationMethod = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "GradientInterpolationMethod",
+					Page = "Color",
+				},
+				ColorOffset = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "Offset",
+					Default = 0,
+					Page = "Color",
+				},
+				ColorRepeat = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "Repeat",
+					Page = "Color",
+				},
+				ColorSubPixel = InstanceInput {
+					SourceOp = "ArrowColor",
+					Source = "SubPixel",
+					Page = "Color",
+				},
+				ShadowBlend = InstanceInput {
+					SourceOp = "ShadowMerge",
+					Source = "Blend",
+					Default = 1.0,
+					Page = "Shadow",
+				},
+				ShadowHStrength = InstanceInput {
+					SourceOp = "ShadowBlur",
+					Source = "HStrength",
+					Name = "Blur",
+					Default = 0.7,
+					Page = "Shadow",
+				},
+				ShadowVStrength = InstanceInput {
+					SourceOp = "ShadowBlur",
+					Source = "VStrength",
+					Default = 0.7,
+					Page = "Shadow",
+				},
+				ShadowGang = InstanceInput {
+					SourceOp = "ShadowBlur",
+					Source = "Gang",
+					Default = 1,
+					Page = "Shadow",
+				},
+				ShadowDistance = InstanceInput {
+					SourceOp = "ShadowMerge",
+					Source = "ShadowDistance",
+					Name = "Distance",
+					Page = "Shadow",
+				},
+				ShadowAngle = InstanceInput {
+					SourceOp = "ShadowMerge",
+					Source = "ShadowAngle",
+					Name = "Angle",
+					Default = 100,
+					Page = "Shadow",
+				},
+				ShadowScale = InstanceInput {
+					SourceOp = "ShadowMerge",
+					Source = "ShadowScale",
+					Name = "Scale",
+					Default = 1,
+					Page = "Shadow",
+				},
+				ShadowTopRightSep = InstanceInput {
+					SourceOp = "ShadowColor",
+					Source = "TopRightSep",
+					ControlGroup = 1,
+					Page = "Shadow",
+				},
+				ShadowTopLeftRed = InstanceInput {
+					SourceOp = "ShadowColor",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 1,
+					Default = 0,
+					Page = "Shadow",
+				},
+				ShadowTopLeftGreen = InstanceInput {
+					SourceOp = "ShadowColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 1,
+					Default = 0,
+					Page = "Shadow",
+				},
+				ShadowTopLeftBlue = InstanceInput {
+					SourceOp = "ShadowColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 1,
+					Default = 0,
+					Page = "Shadow",
+				},
+				ShadowTopLeftAlpha = InstanceInput {
+					SourceOp = "ShadowColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 1,
+					Default = 0.8,
+					Page = "Shadow",
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "ArrowTransform",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				ArrowShape = MacroOperator {
+					NameSet = true,
+					Inputs = ordered() {
+						Input1 = InstanceInput {
+							SourceOp = "ArrowEllipse_3",
+							Source = "Curvature",
+							Default = 0.5,
+						}
+					},
+					Outputs = {
+						MainOutput1 = InstanceOutput {
+							SourceOp = "ArrowHeadTransform_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1045, 280.5 } },
+					UserControls = ordered() {
+						TransformLabel = {
+							LINKS_Name = "Transform",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "LabelControl",
+							LBLC_DropDownButton = true,
+							LBLC_NumInputs = 5,
+							ICS_ControlPage = "Controls",
+							INP_Default = 1,
+							INP_External = false
+						}
+					},
+					Tools = ordered() {
+						ArrowHeadTransform_1 = Transform {
+							CtrlWZoom = false,
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								Input = Input {
+									SourceOp = "ArrowHeadShape_1",
+									Source = "Mask",
+								},
+								Center = Input { Value = { 0.5, 0.7 }, },
+							},
+							ViewInfo = OperatorInfo { Pos = { -165.969, 8.75757 } },
+							UserControls = ordered() {
+								Center = {
+									OFCD_DisplayXScale = 1,
+									LINKID_DataType = "Point",
+									ICS_ControlPage = "Controls",
+									OFCD_DisplayYScale = 1,
+									INPID_InputControl = "OffsetControl",
+									LINKS_Name = "Center",
+								},
+								Size = {
+									INP_MaxAllowed = 1000000,
+									INP_Integer = false,
+									INPID_InputControl = "SliderControl",
+									INP_MaxScale = 5,
+									INP_Default = 1,
+									INP_MinScale = 0,
+									INP_MinAllowed = 0,
+									LINKID_DataType = "Number",
+									ICS_ControlPage = "Controls",
+									ICD_Center = 1,
+									LINKS_Name = "Size"
+								},
+								Pivot = {
+									OFCD_DisplayXScale = 1,
+									LINKID_DataType = "Point",
+									ICS_ControlPage = "Controls",
+									OFCD_DisplayYScale = 1,
+									INPID_InputControl = "OffsetControl",
+									LINKS_Name = "Pivot",
+								}
+							}
+						},
+						ArrowHeadShape_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "ArrowEllipse_3",
+									Source = "Mask",
+								},
+								Filter = Input { Value = FuID { "Fast Gaussian" }, },
+								MaskWidth = Input { Value = 1920, },
+								MaskHeight = Input { Value = 1080, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								UseFrameFormatSettings = Input { Value = 1, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Polyline = Input {
+									SourceOp = "ArrowHeadShape_1Polyline",
+									Source = "Value",
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								},
+							},
+							ViewInfo = OperatorInfo { Pos = { -0.96875, 8.75757 } },
+						},
+						ArrowHeadShape_1Polyline = BezierSpline {
+							SplineColor = { Red = 173, Green = 255, Blue = 47 },
+							CtrlWZoom = false,
+							KeyFrames = {
+								[9356] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+										Closed = true,
+										Points = {
+											{ Linear = true, X = 0, Y = 0.149501661129568, LX = -0.0332225913621262, LY = -0.0564784053156146, RX = 0.0332225913621262, RY = -0.0564784053156146 },
+											{ Linear = true, X = 0.0996677740863787, Y = -0.0199335548172758, LX = -0.0332225913621262, LY = 0.0564784053156146, RX = -0.033499446290144, RY = 0.00276854928017719 },
+											{ Linear = true, X = -0.000830564784053134, Y = -0.0116279069767442, LX = 0.033499446290144, LY = -0.00276854928017719, RX = -0.0329457364341085, RY = -0.00276854928017719 },
+											{ Linear = true, X = -0.0996677740863787, Y = -0.0199335548172758, LX = 0.0329457364341085, LY = 0.00276854928017719, RX = 0.0332225913621262, RY = 0.0564784053156146 }
+										}
+									} }
+							}
+						},
+						ArrowEllipse_3 = EllipseMask {
+							CtrlWShown = false,
+							NameSet = true,
+							Inputs = {
+								ShowViewControls = Input { Value = 0, },
+								Filter = Input { Value = FuID { "Fast Gaussian" }, },
+								BorderWidth = Input { Value = 0.1, },
+								PaintMode = Input { Value = FuID { "Add" }, },
+								Solid = Input { Value = 0, },
+								CapStyle = Input { Value = 0, },
+								WritePosition = Input {
+									Value = 0.955302905334321,
+									Expression = "1-WriteLength",
+								},
+								WriteLength = Input {
+									Value = 0.0446970946656793,
+									Expression = "0.18 / (Width + 0.01)",
+								},
+								OutputSize = Input { Value = FuID { "Custom" }, },
+								MaskWidth = Input { Value = 500, },
+								MaskHeight = Input { Value = 500, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								ClippingMode = Input { Value = FuID { "None" }, },
+								Center = Input {
+									Value = { -1.50855369231877, 0.5 },
+									Expression = "Point(0.5 - Width / 2, 0.5)",
+								},
+								Height = Input {
+									Value = 4.01710738463753,
+									Expression = "Width",
+								},
+								Width = Input {
+									Value = 4.01710738463753,
+									Expression = "exp((1 - Curvature) * 6) / 5",
+								},
+								Curvature = Input { Value = 0.5, },
+							},
+							ViewInfo = OperatorInfo { Pos = { 164.031, 8.75757 } },
+							UserControls = ordered() {
+								Width = {
+									INP_MaxAllowed = 100,
+									INP_Integer = false,
+									INPID_InputControl = "SliderControl",
+									INP_MaxScale = 100,
+									INP_Default = 2,
+									INP_MinScale = 0.00999999977648258,
+									INP_MinAllowed = 0.00999999977648258,
+									LINKID_DataType = "Number",
+									LINKS_Name = "Width",
+								},
+								Curvature = {
+									INP_MaxAllowed = 1,
+									INP_Integer = false,
+									INPID_InputControl = "SliderControl",
+									INP_MaxScale = 1,
+									INP_Default = 0,
+									INP_MinScale = 0,
+									INP_MinAllowed = 0,
+									LINKID_DataType = "Number",
+									ICD_Center = 0.5,
+									LINKS_Name = "Curvature",
+								}
+							}
+						}
+					},
+				},
+				ArrowColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "ArrowHeadTransform_1",
+							Source = "Output",
+						},
+						Width = Input { Value = 500, },
+						Height = Input { Value = 500, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.9450980392157, },
+						TopLeftGreen = Input { Value = 0.9450980392157, },
+						TopLeftBlue = Input { Value = 0.9450980392157, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1045, 214.5 } },
+				},
+				ShadowColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "ArrowHeadTransform_1",
+							Source = "Output",
+						},
+						Width = Input { Value = 500, },
+						Height = Input { Value = 500, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.0, },
+						TopLeftGreen = Input { Value = 0.0, },
+						TopLeftBlue = Input { Value = 0.0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1155, 313.5 } },
+				},
+				ShadowBlur = ofx.com.blackmagicdesign.resolvefx.GaussianBlur {
+					Inputs = {
+						Source = Input {
+							SourceOp = "ShadowColor",
+							Source = "Output",
+						},
+						HStrength = Input { Value = 0.7, },
+						VStrength = Input { Value = 0.7, },
+						Gang = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 313.5 } },
+				},
+				ShadowMerge = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "ArrowColor",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "ShadowBlur",
+							Source = "Output",
+						},
+						Operator = Input { Value = FuID { "Under" }, },
+						Size = Input { Expression = "ShadowScale" },
+						Center = Input { Expression = "Point(ShadowDistance * sin((iif(ArrowTransform.FlipHoriz == 1, 90, -90) - ShadowAngle + ArrowTransform.Angle) * pi / 180) + 0.5, ShadowDistance * cos((iif(ArrowTransform.FlipVert == 1, 90, -90) - ShadowAngle + ArrowTransform.Angle) * pi / 180) + 0.5)", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 445.5 } },
+					UserControls = ordered() {
+						ShadowDistance = {
+							LINKID_DataType = "Number",
+							LINKS_Name = "ShadowDistance",
+							INPID_InputControl = "SliderControl",
+							INP_Integer = false,
+							INP_Default = 0.1,
+							INP_MaxAllowed = 2.0,
+							INP_MaxScale = 0.5,
+							INP_MinScale = 0.0,
+							INP_MinAllowed = 0.0,
+							ICD_Center = 0.0,
+						},
+						ShadowAngle = {
+							LINKS_Name = "ShadowAngle",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "ScrewControl",
+							INP_Integer = false,
+							INP_Default = 100.0,
+							INP_MinScale = -180.0,
+							INP_MaxScale = 180.0,
+							INP_MinAllowed = -180.0,
+							INP_MaxAllowed = 180.0,
+						},
+						ShadowScale = {
+							LINKID_DataType = "Number",
+							LINKS_Name = "ShadowScale",
+							INPID_InputControl = "SliderControl",
+							INP_Integer = false,
+							INP_Default = 1.0,
+							INP_MaxAllowed = 2.0,
+							INP_MaxScale = 1.5,
+							INP_MinScale = 0.5,
+							INP_MinAllowed = 0,
+							ICD_Center = 1.0,
+						},
+					},
+				},
+				ArrowTransform = Transform {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "ShadowMerge",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 1210, 280.5 } },
+				},
+			},
+		}
+	},
+	ActiveTool = "ArrowColorTransformShadow"
+}

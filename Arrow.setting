@@ -1,0 +1,171 @@
+{
+	Tools = ordered() {
+		Arrow = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "ArrowEllipse",
+					Source = "Curvature",
+					Default = 0.5,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "ArrowHeadTransform",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				ArrowHeadTransform = Transform {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "ArrowHeadShape",
+							Source = "Mask",
+						},
+						Center = Input { Value = { 0.5, 0.7 }, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1430, 280.5 } },
+					UserControls = ordered() {
+						Center = {
+							LINKS_Name = "Center",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							OFCD_DisplayXScale = 1,
+							OFCD_DisplayYScale = 1,
+							ICS_ControlPage = "Controls",
+						},
+						Size = {
+							LINKS_Name = "Size",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 1,
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 5,
+							INP_MinAllowed = 0,
+							INP_MaxAllowed = 1000000,
+							ICD_Center = 1,
+							ICS_ControlPage = "Controls"
+						},
+						Pivot = {
+							LINKS_Name = "Pivot",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							OFCD_DisplayXScale = 1,
+							OFCD_DisplayYScale = 1,
+							ICS_ControlPage = "Controls",
+						}
+					}
+				},
+				ArrowHeadShape = PolylineMask {
+					DrawMode = "ModifyOnly",
+					DrawMode2 = "InsertAndModify",
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "ArrowEllipse",
+							Source = "Mask",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							SourceOp = "ArrowHeadShapePolyline",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 1595, 280.5 } },
+				},
+				ArrowHeadShapePolyline = BezierSpline {
+					SplineColor = { Red = 173, Green = 255, Blue = 47 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[9356] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+								Closed = true,
+								Points = {
+									{ Linear = true, X = 0, Y = 0.149501661129568, LX = -0.0332225913621262, LY = -0.0564784053156146, RX = 0.0332225913621262, RY = -0.0564784053156146 },
+									{ Linear = true, X = 0.0996677740863787, Y = -0.0199335548172758, LX = -0.0332225913621262, LY = 0.0564784053156146, RX = -0.033499446290144, RY = 0.00276854928017719 },
+									{ Linear = true, X = -0.000830564784053134, Y = -0.0116279069767442, LX = 0.033499446290144, LY = -0.00276854928017719, RX = -0.0329457364341085, RY = -0.00276854928017719 },
+									{ Linear = true, X = -0.0996677740863787, Y = -0.0199335548172758, LX = 0.0329457364341085, LY = 0.00276854928017719, RX = 0.0332225913621262, RY = 0.0564784053156146 }
+								}
+							} }
+					}
+				},
+				ArrowEllipse = EllipseMask {
+					NameSet = true,
+					Inputs = {
+						ShowViewControls = Input { Value = 0, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.1, },
+						PaintMode = Input { Value = FuID { "Add" }, },
+						Solid = Input { Value = 0, },
+						CapStyle = Input { Value = 0, },
+						WritePosition = Input {
+							Value = 0.997769399496293,
+							Expression = "1-WriteLength",
+						},
+						WriteLength = Input {
+							Value = 0.00223060050370703,
+							Expression = "0.18 / (Width + 0.01)",
+						},
+						OutputSize = Input { Value = FuID { "Custom" }, },
+						MaskWidth = Input { Value = 500, },
+						MaskHeight = Input { Value = 500, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { -39.8428793492735, 0.5 },
+							Expression = "Point(0.5 - Width / 2, 0.5)",
+						},
+						Height = Input {
+							Value = 80.685758698547,
+							Expression = "Width",
+						},
+						Width = Input {
+							Value = 80.685758698547,
+							Expression = "exp((1 - Curvature) * 6) / 5",
+						},
+						Curvature = Input { Value = 0.5, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 1760, 280.5 } },
+					UserControls = ordered() {
+						Width = {
+							LINKS_Name = "Width",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 2,
+							INP_Integer = false,
+							INP_MinScale = 0.00999999977648258,
+							INP_MaxScale = 100,
+							INP_MinAllowed = 0.00999999977648258,
+							INP_MaxAllowed = 100,
+						},
+						Curvature = {
+							LINKS_Name = "Curvature",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_Default = 0,
+							INP_Integer = false,
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							INP_MinAllowed = 0,
+							INP_MaxAllowed = 1,
+							ICD_Center = 0.5,
+						}
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "Arrow"
+}
